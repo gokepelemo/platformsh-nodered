@@ -6,4 +6,4 @@ This repository contains a working configuration of node-red that can be deploye
 
 Read all about [Platform.sh](https://docs.platform.sh/) and [Node-Red](https://nodered.org/docs/).
 
-Node-Red v. 2.2
+[Node-Red v. 2.2](https://github.com/node-red/node-red)
