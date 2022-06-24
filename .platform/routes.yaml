@@ -1,0 +1,22 @@
+# The workflow designer does not work correctly with cache enabled.
+"https://{default}/admin":
+  type: upstream
+  upstream: app:http
+  cache:
+    enabled: false
+
+# Disable cache on websockets URLs. Websocket out nodes on node-red need to be prefixed with /ws/{path}.
+# Platform.sh substitutes https:// with wss://.
+"https://{default}/ws":
+  type: upstream
+  upstream: app:http
+  cache:
+    enabled: false
+
+"https://{default}":
+  type: upstream
+  upstream: app:http
+
+"https://www.{default}":
+  type: redirect
+  to: "https://{default}"
