@@ -17,7 +17,6 @@ credentials.json
 flows*.json
 nodes/node-red-nodes/
 node_modules
-public
 locales/zz-ZZ
 nodes/core/locales/zz-ZZ
 !packages/node_modules
