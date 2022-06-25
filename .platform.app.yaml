@@ -11,13 +11,13 @@ dependencies:
 hooks:
   build: !include
     type: string
-    path: ops/build.sh
+    path: hooks/ops/build.sh
   deploy: !include
     type: string
-    path: ops/deploy.sh
+    path: hooks/ops/deploy.sh
   post_deploy: !include
     type: string
-    path: ops/post_deploy.sh
+    path: hooks/ops/post_deploy.sh
 
 web:
   # Add a web location for a static site in the public directory. Not necessary if the / path is served by node-red's http in node.
@@ -60,13 +60,13 @@ source:
     update-nodered:
       command: !include
         type: string
-        path: ops/update.sh
+        path: ops/source/update.sh
     install-node:
       command: !include
         type: string
-        path: ops/install-node.sh
+        path: ops/source/install-node.sh
     revert-commit:
       command: !include
         type: string
-        path: ops/revert-commit.sh
+        path: ops/source/revert-commit.sh
 
