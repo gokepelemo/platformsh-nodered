@@ -1,4 +1,5 @@
 name: app
+
 type: nodejs:16
 
 disk: 2048
@@ -11,9 +12,14 @@ hooks:
   build: !include
     type: string
     path: ops/build.sh
+  deploy: !include
+    type: string
+    path: ops/deploy.sh
+  post_deploy: !include
+    type: string
+    path: ops/post_deploy.sh
 
 web:
-
   # Add a web location for a static site in the public directory. Not necessary if the / path is served by node-red's http in node.
   locations:
     '/':
@@ -32,7 +38,6 @@ web:
       path: ops/start.sh
 
 mounts:
-
   # A writable mount for the node-red user directory.
   '/.node-red':
     source: local
