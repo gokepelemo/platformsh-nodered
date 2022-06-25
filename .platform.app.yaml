@@ -11,13 +11,13 @@ dependencies:
 hooks:
   build: !include
     type: string
-    path: hooks/ops/build.sh
+    path: ops/hooks/build.sh
   deploy: !include
     type: string
-    path: hooks/ops/deploy.sh
+    path: ops/hooks/deploy.sh
   post_deploy: !include
     type: string
-    path: hooks/ops/post_deploy.sh
+    path: ops/hooks/post_deploy.sh
 
 web:
   # Add a web location for a static site in the public directory. Not necessary if the / path is served by node-red's http in node.
