@@ -1,3 +1,3 @@
 set -e
-npm install -g --unsafe-perm
+npm install -g --unsafe-perm node-red
 
