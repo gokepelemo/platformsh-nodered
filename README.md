@@ -4,13 +4,13 @@ This repository contains a working configuration of node-red that can be deploye
 - A publicly available `/files` path to serve node-red processed files publicly e.g. output > `files/{filename}.pdf` on node-red
 - The flow editor is served from the `/admin` path so that a static site can be served from `/`
 
-## Installing new nodes
+## Add new nodes
 
 You can add new [nodes](https://flows.nodered.org/search?type=node) to node-red by installing them with npm locally and committing the changes. You can also install them in place using Source Operations with this command:
 
 `platform source-operation:run install-node --variable env:NR_NODE={npm package name}`
 
-## Updating
+## Update
 
 Node-red is updated automatically during every build. You can update node-red in place using our Source Operations feature with this Platform.sh CLI command:
 
@@ -25,3 +25,4 @@ You can revert to the last commit if your node install or update is not successf
 Documentation: [Platform.sh](https://docs.platform.sh/) | [Node-Red](https://nodered.org/docs/)
 
 Github: [Platform.sh](https://github.com/platformsh/) | [Node-Red](https://github.com/node-red/)
+
