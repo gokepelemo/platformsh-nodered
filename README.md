@@ -10,7 +10,7 @@ You can add new [nodes](https://flows.nodered.org/search?type=node) to node-red 
 
 `platform source-operation:run install-node --variable env:NR_NODE={npm package name}`
 
-## Update
+## Updates
 
 Node-red is updated automatically during every build. You can update node-red in place using our Source Operations feature with this Platform.sh CLI command:
 
