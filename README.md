@@ -22,6 +22,6 @@ You can revert to the last commit if your node install or update is not successf
 
 `platform source-operation:run revert-commit`
 
-Read all about [Platform.sh](https://docs.platform.sh/) and [Node-Red](https://nodered.org/docs/).
+Documentation: [Platform.sh](https://docs.platform.sh/) | [Node-Red](https://nodered.org/docs/)
 
-[Node-Red](https://github.com/node-red/) | [Platform.sh](https://github.com/platformsh/)
+Github: [Platform.sh](https://github.com/platformsh/) | [Node-Red](https://github.com/node-red/)
