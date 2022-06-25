@@ -1,2 +1,2 @@
 export PORT=8888
-export EDITOR=/admin
+export FLOWEDITOR=/admin

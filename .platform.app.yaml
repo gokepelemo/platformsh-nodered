@@ -8,9 +8,9 @@ dependencies:
     'npm': '*'
 
 hooks:
-  build: |
-    set -e
-    npm install -g --unsafe-perm node-red
+  build: !include
+    type: string
+    path: build.sh
 
 web:
 
@@ -27,8 +27,9 @@ web:
           expires: 30m
 
   commands:
-    start: |
-      node-red -p $PORT -D httpAdminRoot=$EDITOR -D httpStatic=$EDITOR
+    start: !include
+      type: string
+      path: start.sh
 
 mounts:
 
@@ -45,3 +46,22 @@ mounts:
 variables:
   env:
     'NODE_OPTIONS': '--max-old-space-size=512'
+
+source:
+  operations:
+    auto-update:
+      command: |
+        curl -fsS https://raw.githubusercontent.com/platformsh/source-operations/main/setup.sh | { bash /dev/fd/3 sop-autoupdate; } 3<&0
+    update-nodered:
+      command: !include
+        type: string
+        path: update.sh
+    install-node:
+      command: !include
+        type: string
+        path: install-node.sh
+    revert-commit:
+      command: !include
+        type: string
+        path: revert-commit.sh
+
