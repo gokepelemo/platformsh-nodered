@@ -10,7 +10,7 @@ dependencies:
 hooks:
   build: !include
     type: string
-    path: build.sh
+    path: ops/build.sh
 
 web:
 
@@ -29,7 +29,7 @@ web:
   commands:
     start: !include
       type: string
-      path: start.sh
+      path: ops/start.sh
 
 mounts:
 
@@ -55,13 +55,13 @@ source:
     update-nodered:
       command: !include
         type: string
-        path: update.sh
+        path: ops/update.sh
     install-node:
       command: !include
         type: string
-        path: install-node.sh
+        path: ops/install-node.sh
     revert-commit:
       command: !include
         type: string
-        path: revert-commit.sh
+        path: ops/revert-commit.sh
 
