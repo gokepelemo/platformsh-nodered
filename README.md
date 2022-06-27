@@ -22,7 +22,10 @@ You can revert to the last commit if your node install or update is not successf
 
 `platform source-operation:run revert-commit`
 
+## Security
+Your node-red application can be secured by HTTP basic authentication using this Platform.sh CLI command:
+`platform environment:http-access --auth nodered:nodered` 
+
 Documentation: [Platform.sh](https://docs.platform.sh/) | [Node-Red](https://nodered.org/docs/)
 
 Github: [Platform.sh](https://github.com/platformsh/) | [Node-Red](https://github.com/node-red/)
-
